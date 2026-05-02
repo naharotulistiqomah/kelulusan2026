@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengumuman Kelulusan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h2>SMK NEGERI 2 BANGKALAN</h2>
+  <p>Pengumuman Kelulusan Kelas XII</p>
+</header>
+
+<!-- CARD UTAMA -->
+<div class="container">
+  <div class="card">
+    <h3>CEK KELULUSAN</h3>
+    <input type="text" id="nisn" placeholder="Masukkan NISN">
+    <button onclick="cekKelulusan()">Cek Sekarang</button>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div id="loading">
+  <p>&#9203; Sedang memproses...</p>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h1 id="judul">&#127891; SELAMAT &#127891;</h1>
+    <h2 id="nama"></h2>
+    <p id="kelas" class="info-siswa"></p>
+    <p id="status" class="info-siswa"></p>
+    <p id="pesan"></p>
+    <button onclick="tutupModal()">Tutup</button>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 | Kelulusan - by Naharotul Istiqomah
+</footer>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js?v=2"></script>
+
+</body>
+</html>
