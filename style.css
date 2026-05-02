@@ -1,6 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   font-family: 'Segoe UI', sans-serif;
@@ -31,6 +37,7 @@ header p {
   justify-content: center;
   align-items: center;
   flex: 1;
+  min-height: 0;
   padding: 20px 0;
 }
 
@@ -160,9 +167,30 @@ footer {
 
 /* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
+  header {
+    padding: 24px 16px 14px;
+  }
+
+  .container {
+    padding: 12px 0;
+  }
+
   .card {
     width: 90%;
     padding: 20px;
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+  }
+
+  .card input {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 10px 12px;
+    font-size: 12px;
   }
 
   .modal-content {
