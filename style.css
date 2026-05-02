@@ -4,8 +4,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  background: linear-gradient(135deg, #dff9fb, #c7ecee, #badc58);
+  color: #1f2933;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -13,7 +13,7 @@ body {
 header {
   text-align: center;
   padding: 40px 20px 20px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.45);
 }
 
 header h2 {
@@ -38,8 +38,8 @@ footer {
   text-align: center;
   padding: 15px 20px;
   font-size: 14px;
-  color: #c0c0c0;
-  background: rgba(0,0,0,0.25);
+  color: #334155;
+  background: rgba(255,255,255,0.45);
 }
 
 /* CARD */
@@ -66,7 +66,7 @@ footer {
 .card button {
   margin-top: 15px;
   padding: 10px;
-  background: #2c5364;
+  background: #16a085;
   color: white;
   border: none;
   cursor: pointer;
@@ -102,7 +102,11 @@ footer {
   position: fixed;
   inset: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: 100dvh;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
   background: rgba(0,0,0,0.8);
   z-index: 900;
 }
@@ -111,11 +115,14 @@ footer {
 .modal-content {
   background: white;
   color: black;
-  margin: 10% auto;
-  padding: 40px;
-  width: 50%;
+  margin: clamp(24px, 8dvh, 80px) auto;
+  padding: clamp(20px, 5vw, 40px);
+  width: min(92vw, 560px);
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  overflow-y: auto;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 18px;
   animation: fadeZoom 0.6s ease;
 }
 
@@ -133,7 +140,12 @@ footer {
 /* TEXT ANIMATION */
 #judul {
   color: green;
+  font-size: clamp(22px, 6vw, 32px);
   animation: bounce 1s infinite;
+}
+
+#nama {
+  overflow-wrap: anywhere;
 }
 
 .info-siswa {
@@ -154,9 +166,10 @@ footer {
   }
 
   .modal-content {
-    width: 90%;
-    margin: 20% auto;
-    padding: 25px;
+    width: 100%;
+    margin: clamp(16px, 6dvh, 48px) auto;
+    padding: 20px;
+    border-radius: 16px;
   }
 
   header h2 {
@@ -168,11 +181,11 @@ footer {
   }
 
   #judul {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   #nama {
-    font-size: 20px;
+    font-size: clamp(18px, 5.5vw, 20px);
   }
 
   .info-siswa {

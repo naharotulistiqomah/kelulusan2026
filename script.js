@@ -149,4 +149,6 @@ function tutupModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-loadData().catch(error => console.error(error));
+window.addEventListener("load", () => {
+  loadData().catch(() => {});
+});
